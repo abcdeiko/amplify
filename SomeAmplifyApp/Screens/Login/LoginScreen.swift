@@ -11,10 +11,10 @@ struct LoginScreen: View {
     @State private var username: String = ""
     @State private var password: String = ""
     
-    @ObservedObject private var viewModel: LoginViewModel
+    @StateObject private var viewModel: LoginViewModel
     
     init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {

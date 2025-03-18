@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ForgotPasswordScreen: View {
-    @ObservedObject var viewModel: ForgotPasswordViewModel
+    @StateObject var viewModel: ForgotPasswordViewModel
+    
+    init(viewModel: ForgotPasswordViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {

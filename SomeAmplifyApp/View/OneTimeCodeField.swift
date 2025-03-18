@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct OneTimeCodeField: View {
     private let codeRegex = try! NSRegularExpression(pattern: "[0-9]+")
     private let error: Bool

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ChangePasswordScreen: View {
-    @ObservedObject private var viewModel: ChangePasswordViewModel
+    @StateObject private var viewModel: ChangePasswordViewModel
     
     init(viewModel: ChangePasswordViewModel) {
-        self.viewModel = viewModel
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
